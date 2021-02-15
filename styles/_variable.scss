@@ -1,0 +1,21 @@
+$primary-color: #d5e4e4;
+$secondary-color: #e41814;
+$font-color: #1f2f54;
+
+// le design des boutons
+button {
+  width: 120px;
+  height: 40px;
+  float: right;
+  background-color: $secondary-color;
+  border: none;
+  color: $primary-color;
+  font-family: $secondary-font;
+  font-size: 20px;
+}
+// tous les liens a sont:
+a {
+  text-decoration: none;
+  font-family: $secondary-font;
+  color: $font-color;
+}
