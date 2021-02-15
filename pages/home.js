@@ -23,7 +23,8 @@ export const home = () => {
           </section>
           <section class="ligne2">
             <div class="phaser"><div class="img-pha"><span class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit excepturi placeat sed molestiae dolorem</span></div></div>
-            <div class="dei"><div class="img-dei"><span class="texte">Projet de classe réalisé pour "Défense des enfants international Belgique" <button class="voir-dei"><a href="https://www.dei-belgique.be/expo-bridge/">Vers le site dei</a></button></span></div></div>
+            <div class="dei"><div class="img-dei">
+              <span class="texte">Projet de classe réalisé pour "Défense des enfants international Belgique" <button class="modal-dei">modal</button><button class="voir-dei"><a href="https://www.dei-belgique.be/expo-bridge/">Découvrir</a></button></span></div></div>
             <div class="animate"></div>
           </section>
           <div class="container-tache3"><div class="tache3"></div></div>
