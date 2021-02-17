@@ -17,9 +17,9 @@ export const home = () => {
         <h2><a name="projet">Projets</a></h2>
         <section class="img-projet">
           <section class="ligne1">
-            <div class="projet1"><div class="img-less"><span class="texte">Site "Less is Belge": projet de groupe réalisé à Interface3.<button class="voir-less">En voir plus</button></span></div></div>
+            <div class="projet1"><div class="img-less"><span class="texte">Site "Less is Belge": projet de groupe réalisé à Interface3.<button class="voir-less">Découvrir</button></span></div></div>
             <div class="ai"><div class="img-ai"><span class="texte">Carte postale déssinée en Illustrator.</span></div></div>
-            <div class="hackaton"><div class="img-haka"><span class="texte">Projet Hackathon 2020 pour promouvoir l'informatique au féminin.<a href="#modal-hacka" class="js-modal">modal</a><button class="voir-hacka">En voir plus</button></span></div></div>
+            <div class="hackaton"><div class="img-haka"><span class="texte">Projet Hackathon 2020 pour promouvoir l'informatique au féminin.</br><a href="#modal-hacka" class="js-modal">modal</a><button class="voir-hacka">Découvrir</button></span></div></div>
           </section>
           <section class="ligne2">
             <div class="phaser"><div class="img-pha"><span class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit excepturi placeat sed molestiae dolorem</span></div></div>
@@ -31,10 +31,15 @@ export const home = () => {
         </section>
       </article>
       <aside id="modal-hacka" class="modal" style="display:none;">
-        <div class="contenu-modal">
+        <div class="contenu-modal" id="carroussel-hacka">
           <button class="js-modal-close">X</button>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit excepturi placeat sed molestiae dolorem
-          </p>
+          <ul>
+            <li><img src="haka1.png"/></li>
+            <li><img src="haka2.png"/></li>
+            <li><img src="haka3.png"/></li>
+            <li><img src="haka4.png"/></li>
+            <li><img src="haka5.png"/></li>
+          </ul>
         </div>
       </aside>
 
@@ -73,8 +78,19 @@ export const home = () => {
   $('.voir-less').on('click', () => less());
 
   /* modal */
-  const modal = null;
+  let modal = null;
 
+  const stopPropagation = function (e) {
+    e.stopPropagation();
+  };
+  const closeModal = function (e) {
+    e.preventDefault();
+    modal.style.display = 'none';
+    modal.removeEventListener('click', closeModal);
+    modal.querySelector('.js-modal-close').removeEventListener('click', closeModal);
+    modal.querySelector('.js-modal-close').removeEventListener('click', stopPropagation);
+    modal = null;
+  };
   const openModal = function (e) {
     e.preventDefault();
     const target = document.querySelector(e.target.getAttribute('href'));
@@ -82,15 +98,40 @@ export const home = () => {
     modal = target;
     modal.addEventListener('click', closeModal);
     modal.querySelector('.js-modal-close').addEventListener('click', closeModal);
-  };
-  const closeModal = function (e) {
-    e.preventDefault();
-    modal.style.display = 'none';
-    modal.removeEventListener('click', closeModal);
-    modal.querySelector('.js-modal-close').removeEventListener('click', closeModal);
-    modal = null;
+    modal.querySelector('.js-modal-close').addEventListener('click', stopPropagation);
   };
   document.querySelectorAll('.js-modal').forEach((a) => {
     a.addEventListener('click', openModal);
+  });
+  /* carroussel */
+  const $carrousselHacka = $('#carroussel-hacka');
+  const $imgH = $('#carroussel-hacka img');
+  const indexImgH = $imgH.length - 1;
+  let i = 0;
+  let $currentImgH = $imgH.eq(i); // function eq()=pour cibler
+
+  $imgH.css('display', 'none');// on cache
+  $currentImgH.css('display', 'block');// on montre img courante
+  $carrousselHacka.append('<div class="controls"><span class="prev">Prec</span><span class="next">suiv</span></div>');
+  $('.next').on('click', () => { // image suivante
+    i++;
+    if (i <= indexImgH) {
+      $imgH.css('display', 'none');
+      $currentImgH = $imgH.eq(i); // on définit la nouvelle image
+      $currentImgH.css('display', 'block'); // puis on l'affiche
+    } else {
+      i = indexImgH;
+    }
+  });
+
+  $('.prev').on('click', () => { // image précédente
+    i--; // on décrémente le compteur
+    if (i >= 0) {
+      $imgH.css('display', 'none');
+      $currentImgH = $imgH.eq(i);
+      $currentImgH.css('display', 'block');
+    } else {
+      i = 0;
+    }
   });
 };
