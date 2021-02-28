@@ -130,6 +130,53 @@ footer {
     }
   }
 }
+@media screen and (max-width: 768px) {
+  footer {
+    h2 {
+      font-family: $primary-font;
+      font-size: 40px;
+      color: $font-color;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    div {
+      font-family: $secondary-font;
+      font-size: 24px;
+      color: $font-color;
+      margin-left: 20px;
+      margin-top: 8px;
+      position: relative;
+      z-index: 1;
+      .container-tache5 {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  footer {
+    h2 {
+      font-family: $primary-font;
+      font-size: 40px;
+      color: $font-color;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    div {
+      font-family: $secondary-font;
+      font-size: 24px;
+      color: $font-color;
+      margin-left: 20px;
+      margin-top: 8px;
+      position: relative;
+      z-index: 1;
+      .container-tache5 {
+        display: none;
+      }
+    }
+  }
+}
+
 // anim curseur
 .animCursor {
   width: 20px;
@@ -164,6 +211,7 @@ footer {
   right: 50px;
   z-index: 3;
 }
+
 //page projet less is belge
 .less {
   h2 {

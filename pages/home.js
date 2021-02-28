@@ -17,9 +17,9 @@ export const home = () => {
         <h2><a name="projet">Projets</a></h2>
         <section class="img-projet">
           <section class="ligne1">
-            <div class="projet1"><div class="img-less"><span class="texte">Site "Less is Belge": projet de groupe réalisé à Interface3.<button class="voir-less">Découvrir</button></span></div></div>
+            <div class="projet1"><div class="img-less"><span class="texte">Site "Less is Belge": projet de groupe réalisé à Interface3.</br><div class="d-flex"><a href="#modal-hacka" class="js-modal">modal</a><button class="voir"><a href="https://less-is-belge.netlify.app/">Découvrir</a></button></div></span></div></div>
             <div class="ai"><div class="img-ai"><span class="texte">Carte postale déssinée en Illustrator.</span></div></div>
-            <div class="hackaton"><div class="img-haka"><span class="texte">Projet Hackathon 2020 pour promouvoir l'informatique au féminin.</br><a href="#modal-hacka" class="js-modal">modal</a><button class="voir-hacka">Découvrir</button></span></div></div>
+            <div class="hackaton"><div class="img-haka"><span class="texte">Projet Hackathon 2020 pour promouvoir l'informatique au féminin.</br><div class="d-flex"><a href="#modal-hacka" class="js-modal">modal</a><button class="voir"><a href=" https://logici-elles.if3.dev/">Découvrir</a></button></div></span></div></div>
           </section>
           <section class="ligne2">
             <div class="phaser"><div class="img-pha"><span class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit excepturi placeat sed molestiae dolorem</span></div></div>
