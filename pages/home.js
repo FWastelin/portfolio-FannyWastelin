@@ -16,9 +16,9 @@ export const home = () => {
         <h2><a name="projet">Projets</a></h2>
         <section class="img-projet">
           <section class="ligne1">
-            <div class="projet1"><div class="img-less"><span class="texte">Site "Less is Belge": projet de groupe réalisé à Interface3.</br><div class="d-flex"><a href="#modal-lib" class="js-modal">modal</a><button class="voir"><a href="https://less-is-belge.netlify.app/">Découvrir</a></button></div></span></div></div>
+            <div class="projet1"><div class="img-less"><span class="texte">Site "Less is Belge": projet de groupe réalisé à Interface3.</br><div class="d-flex"><a href="#modal-lib" class="js-modal">En voir plus<img src="./images/eyes.pdf" alt="img1"/></a><button class="voir"><a href="https://less-is-belge.netlify.app/">Découvrir</a></button></div></span></div></div>
             <div class="ai"><div class="img-ai"><span class="texte">Carte postale déssinée en Illustrator.</span></div></div>
-            <div class="hackaton"><div class="img-haka"><span class="texte">Projet Hackathon 2020 pour promouvoir l'informatique au féminin.</br><div class="d-flex"><a href="#modal-hacka" class="js-modal">modal</a><button class="voir"><a href=" https://logici-elles.if3.dev/">Découvrir</a></button></div></span></div></div>
+            <div class="hackaton"><div class="img-haka"><span class="texte">Projet Hackathon 2020 pour promouvoir l'informatique au féminin.</br><div class="d-flex"><a href="#modal-hacka" class="js-modal">En voir plus</a><button class="voir"><a href=" https://logici-elles.if3.dev/">Découvrir</a></button></div></span></div></div>
           </section>
           <section class="ligne2">
             <div class="phaser"><div class="img-pha"><span class="texte">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit excepturi placeat sed molestiae dolorem</span></div></div>
@@ -33,8 +33,8 @@ export const home = () => {
         <div class="slideshow-container-lib contenu-modal" id="carroussel-lib">
           <button class="js-modal-close">X</button>
           <ul>
-            <li class="mySlides-lib"><img src="./images/lessIsBelge1.png" alt="img1"/></li>
-            <li class="mySlides-lib"><img src="./images/lessIsBelge2.jpg" alt="img2"/></li>
+            <li class="mySlides-lib"><img src="./images/lib2.png" alt="img1"/></li>
+            <li class="mySlides-lib"><img src="./images/lib1.png" alt="img2"/></li>
             <li class="mySlides-lib"><img src="./images/lessIsBelge3.jpg" alt="img3"/></li>
             <li class="mySlides-lib"><img src="./images/lessIsBelge4.jpg" alt="img4"/></li>
             <li class="mySlides-lib"><img src="./images/lessIsBelge5.png" alt="img5"/></li>
