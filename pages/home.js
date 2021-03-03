@@ -12,7 +12,6 @@ export const home = () => {
           <div class="container-tache2"><div class="tache2"></div></div>
         </section>
       </article>
-
       <article class="projet">
         <h2><a name="projet">Projets</a></h2>
         <section class="img-projet">
@@ -30,16 +29,28 @@ export const home = () => {
           <div class="container-tache3"><div class="tache3"></div></div>
         </section>
       </article>
-    
-      <aside id="modal-hacka" class="modal" style="display:none;">
-        <div class="contenu-modal" id="carroussel-hacka">
+      <aside class="modal" style="display:none;">
+        <div class="slideshow-container-lib contenu-modal" id="carroussel-hacka">
           <button class="js-modal-close">X</button>
           <ul>
-            <li><img src="./images/haka1.png" alt="img1"/></li>
-            <li><img src="./images/haka2.png" alt="img2"/></li>
-            <li><img src="./images/haka3.png" alt="img3"/></li>
-            <li><img src="./images/haka4.png" alt="img4"/></li>
-            <li><img src="./images/haka5.png" alt="img5"/></li>
+            <li class="mySlides-lib"><img src="./images/lessIsBelge1.png" alt="img1"/></li>
+            <li class="mySlides-lib"><img src="./images/lessIsBelge2.jpg" alt="img2"/></li>
+            <li class="mySlides-lib"><img src="./images/lessIsBelge3.jpg" alt="img3"/></li>
+            <li class="mySlides-lib"><img src="./images/lessIsBelge4.jpg" alt="img4"/></li>
+            <li class="mySlides-lib"><img src="./images/lessIsBelge5.png" alt="img5"/></li>
+            <li class="mySlides-lib"><img src="./images/lessIsBelge6.png" alt="img6"/></li>
+          </ul>
+        </div>
+      </aside>
+      <aside id="modal-hacka" class="modal" style="display:none;">
+        <div class="slideshow-container-haka contenu-modal" id="carroussel-hacka">
+          <button class="js-modal-close">X</button>
+          <ul>
+            <li class="mySlides-hacka"><img src="./images/haka1.png" alt="img1"/></li>
+            <li class="mySlides-hacka"><img src="./images/haka2.png" alt="img2"/></li>
+            <li class="mySlides-hacka"><img src="./images/haka3.png" alt="img3"/></li>
+            <li class="mySlides-hacka"><img src="./images/haka4.png" alt="img4"/></li>
+            <li class="mySlides-hacka"><img src="./images/haka5.png" alt="img5"/></li>
           </ul>
         </div>
       </aside>
@@ -77,7 +88,7 @@ export const home = () => {
   document.querySelector('main').innerHTML = contentHome;
   $('.voir-less').on('click', () => less());
 
-  /* modal */
+  /* modal-haka */
   let modal = null;
   const stopPropagation = function (e) {
     e.stopPropagation();
@@ -104,36 +115,20 @@ export const home = () => {
   document.querySelectorAll('.js-modal').forEach((a) => {
     a.addEventListener('click', openModal);
   });
-
   /* carroussel */
-  const $carrousselHacka = $('#carroussel-hacka');
-  const $imgH = $('#carroussel-hacka img');
-  const indexImgH = $imgH.length - 1;
-  let i = 0;
-  let $currentImgH = $imgH.eq(i); // function eq()=pour cibler
-
-  $imgH.css('display', 'none');// on cache
-  $currentImgH.css('display', 'block');// on montre img courante
-  $carrousselHacka.append('<div class="controls"><span class="prev">Prec</span><span class="next">suiv</span></div>');
-  $('.next').on('click', () => { // image suivante
-    i++;
-    if (i <= indexImgH) {
-      $imgH.css('display', 'none');
-      $currentImgH = $imgH.eq(i); // on définit la nouvelle image
-      $currentImgH.css('display', 'block'); // puis on l'affiche
-    } else {
-      i = indexImgH;
+  let slideIndex = 0;
+  function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName('mySlides-hacka');
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
     }
-  });
-
-  $('.prev').on('click', () => { // image précédente
-    i--; // on décrémente le compteur
-    if (i >= 0) {
-      $imgH.css('display', 'none');
-      $currentImgH = $imgH.eq(i);
-      $currentImgH.css('display', 'block');
-    } else {
-      i = 0;
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
     }
-  });
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 2000);
+  }
+  showSlides();
 };
