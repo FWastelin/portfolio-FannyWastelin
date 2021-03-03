@@ -16,7 +16,7 @@ export const home = () => {
         <h2><a name="projet">Projets</a></h2>
         <section class="img-projet">
           <section class="ligne1">
-            <div class="projet1"><div class="img-less"><span class="texte">Site "Less is Belge": projet de groupe réalisé à Interface3.</br><div class="d-flex"><a href="#modal-hacka" class="js-modal">modal</a><button class="voir"><a href="https://less-is-belge.netlify.app/">Découvrir</a></button></div></span></div></div>
+            <div class="projet1"><div class="img-less"><span class="texte">Site "Less is Belge": projet de groupe réalisé à Interface3.</br><div class="d-flex"><a href="#modal-lib" class="js-modal">modal</a><button class="voir"><a href="https://less-is-belge.netlify.app/">Découvrir</a></button></div></span></div></div>
             <div class="ai"><div class="img-ai"><span class="texte">Carte postale déssinée en Illustrator.</span></div></div>
             <div class="hackaton"><div class="img-haka"><span class="texte">Projet Hackathon 2020 pour promouvoir l'informatique au féminin.</br><div class="d-flex"><a href="#modal-hacka" class="js-modal">modal</a><button class="voir"><a href=" https://logici-elles.if3.dev/">Découvrir</a></button></div></span></div></div>
           </section>
@@ -29,8 +29,8 @@ export const home = () => {
           <div class="container-tache3"><div class="tache3"></div></div>
         </section>
       </article>
-      <aside class="modal" style="display:none;">
-        <div class="slideshow-container-lib contenu-modal" id="carroussel-hacka">
+      <aside id="modal-lib" class="modal" style="display:none;">
+        <div class="slideshow-container-lib contenu-modal" id="carroussel-lib">
           <button class="js-modal-close">X</button>
           <ul>
             <li class="mySlides-lib"><img src="./images/lessIsBelge1.png" alt="img1"/></li>
@@ -131,4 +131,18 @@ export const home = () => {
     setTimeout(showSlides, 2000);
   }
   showSlides();
+  function showSlidesL() {
+    let i;
+    const slides = document.getElementsByClassName('mySlides-lib');
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlidesL, 2000);
+  }
+  showSlidesL();
 };
