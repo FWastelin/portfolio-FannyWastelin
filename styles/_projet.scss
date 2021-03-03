@@ -354,6 +354,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
+      z-index: 2;
     }
     ul li {
       position: absolute;
@@ -362,12 +363,15 @@
       top: 0;
       left: 0;
       img {
-        height: 100%;
+        margin: 30px;
+        max-width: 90%;
+        max-height: 700px;
+        z-index: 1;
       }
     }
   }
 }
-.d-flex {
+.controls {
   display: flex;
   justify-content: space-between;
   .prev {

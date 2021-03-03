@@ -30,15 +30,16 @@ export const home = () => {
           <div class="container-tache3"><div class="tache3"></div></div>
         </section>
       </article>
+    
       <aside id="modal-hacka" class="modal" style="display:none;">
         <div class="contenu-modal" id="carroussel-hacka">
           <button class="js-modal-close">X</button>
           <ul>
-            <li><img src="haka1.png"/></li>
-            <li><img src="haka2.png"/></li>
-            <li><img src="haka3.png"/></li>
-            <li><img src="haka4.png"/></li>
-            <li><img src="haka5.png"/></li>
+            <li><img src="./images/haka1.png" alt="img1"/></li>
+            <li><img src="./images/haka2.png" alt="img2"/></li>
+            <li><img src="./images/haka3.png" alt="img3"/></li>
+            <li><img src="./images/haka4.png" alt="img4"/></li>
+            <li><img src="./images/haka5.png" alt="img5"/></li>
           </ul>
         </div>
       </aside>
@@ -51,9 +52,8 @@ export const home = () => {
             <ul>
               <li>Html5/ Css3/ Sass</li>
               <li>UX/UI</li>
-              <li>Javascript/ JQuery</li>
-              <li>Git</li>
-              <li>Vue.js</li>
+              <li>JavaScript/ jQuery</li>
+              <li>Git/ Github</li>
               <li>PHP/ MySql</li>
               <li>Node.js/noSql</li>
               <li>Phaser</li>
@@ -79,7 +79,6 @@ export const home = () => {
 
   /* modal */
   let modal = null;
-
   const stopPropagation = function (e) {
     e.stopPropagation();
   };
@@ -87,8 +86,8 @@ export const home = () => {
     e.preventDefault();
     modal.style.display = 'none';
     modal.removeEventListener('click', closeModal);
-    modal.querySelector('.js-modal-close').removeEventListener('click', closeModal);
     modal.querySelector('.js-modal-close').removeEventListener('click', stopPropagation);
+    modal.querySelector('.js-modal-close').removeEventListener('click', closeModal);
     modal = null;
   };
   const openModal = function (e) {
@@ -97,12 +96,15 @@ export const home = () => {
     target.style.display = null;
     modal = target;
     modal.addEventListener('click', closeModal);
-    modal.querySelector('.js-modal-close').addEventListener('click', closeModal);
     modal.querySelector('.js-modal-close').addEventListener('click', stopPropagation);
+    modal.querySelector('.js-modal-close').addEventListener('click', closeModal);
+
+    console.log(modal);
   };
   document.querySelectorAll('.js-modal').forEach((a) => {
     a.addEventListener('click', openModal);
   });
+
   /* carroussel */
   const $carrousselHacka = $('#carroussel-hacka');
   const $imgH = $('#carroussel-hacka img');
