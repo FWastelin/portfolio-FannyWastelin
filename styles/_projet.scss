@@ -40,8 +40,17 @@
             margin: auto;
             padding: 40px;
             background-color: rgb(255, 255, 255, 0.7);
-            .voir-less {
-              float: right;
+            .js-modal {
+              width: 120px;
+              height: 40px;
+              background-color: $secondary-color;
+              border: none;
+              color: $primary-color;
+              font-family: $secondary-font;
+              font-size: 20px;
+              text-align: center;
+              padding: 10px;
+              float: left;
             }
           }
         }
@@ -98,7 +107,15 @@
             background-color: rgb(255, 255, 255, 0.7);
           }
           .js-modal {
-            color: $secondary-color;
+            width: 120px;
+            height: 40px;
+            background-color: $secondary-color;
+            border: none;
+            color: $primary-color;
+            font-family: $secondary-font;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
             float: left;
           }
         }
@@ -168,8 +185,28 @@
       .animate {
         width: 35%;
         height: 400px;
-        border: 1px solid $font-color;
         margin: 20px;
+        .img-horo {
+          background-image: url("./static/images/horoscope.png");
+          background-size: cover;
+          background-position: top;
+          width: 100%;
+          height: 100%;
+          .texte {
+            display: none;
+          }
+          &:hover span {
+            display: block;
+            font-family: $secondary-font;
+            font-size: 25px;
+            color: $font-color;
+            width: 100%;
+            height: 40%;
+            margin: auto;
+            padding: 40px;
+            background-color: rgb(255, 255, 255, 0.7);
+          }
+        }
       }
     }
     .container-tache3 {

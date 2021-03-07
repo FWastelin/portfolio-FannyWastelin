@@ -16,15 +16,17 @@ export const home = () => {
         <h2><a name="projet">Projets</a></h2>
         <section class="img-projet">
           <section class="ligne1">
-            <div class="projet1"><div class="img-less"><span class="texte">Projet de groupe réalisé à 3 lors de ma formation. Objectif : promouvoir la mode éco-responsable belge.</br>Technologies utilisées : Javascript, HTML, SCSS, Webpack. </br><div class="d-flex"><a href="#modal-lib" class="js-modal">En voir Plus</a><button class="voir"><a href="https://less-is-belge.netlify.app/">Découvrir</a></button></div></span></div></div>
+            <div class="projet1"><div class="img-less"><span class="texte">Projet de groupe réalisé à 3 lors de ma formation. Objectif : promouvoir la mode éco-responsable belge.</br>Technologies utilisées : Javascript, HTML, SCSS, Webpack. </br><div class="d-flex"><a href="#modal-lib" class="js-modal">En voir plus</a><button class="voir"><a href="https://less-is-belge.netlify.app/">Découvrir</a></button></div></span></div></div>
             <div class="ai"><div class="img-ai"><span class="texte">Carte postale dessinée avec Illustrator.</span></div></div>
             <div class="hackaton"><div class="img-haka"><span class="texte">Projet réalisé lors du Hackathon 2020 de mon centre de formation. Objectif : promouvoir l’informatique au féminin.</br>Technologies utilisées : Javascript, HTML, SCSS, Parcel.</br><div class="d-flex"><a href="#modal-hacka" class="js-modal">En voir plus</a><button class="voir"><a href=" https://logici-elles.if3.dev/">Découvrir</a></button></div></span></div></div>
           </section>
           <section class="ligne2">
-            <div class="phaser"><div class="img-pha"><span class="texte">R-Types games réalisés durant ma formation à Interface3 (2 jours).</br>Technologie utilisée :Phaser</span></div></div>
+            <div class="phaser"><div class="img-pha"><span class="texte">R-Types game réalisé durant ma formation à Interface3.</br>Technologie utilisée : Phaser</span></div></div>
             <div class="dei"><div class="img-dei">
-              <span class="texte">Site web créé avec l’ensemble de la classe. Client : « Défense des enfants International (DEI) Belgique. Technologies utilisées : React, HTML, SCSS.</br><button class="voir-dei"><a href="https://www.dei-belgique.be/expo-bridge/">Découvrir</a></button></span></div></div>
-            <div class="animate"></div>
+              <span class="texte">Site web créé avec l’ensemble de la classe. Client : « Défense des enfants International (DEI) Belgique. Technologies utilisées : HTML, SCSS, React.</br><button class="voir-dei"><a href="https://www.dei-belgique.be/expo-bridge/">Découvrir</a></button></span></div></div>
+            <div class="animate"><div class="img-horo">
+            <span class="texte">Exercice "horoscope chinois" réalisé durant ma formation à Interface3.</br>Technologies utilisées : HTML, SCSS, React.</span></div>
+            </div>
           </section>
           <div class="container-tache3"><div class="tache3"></div></div>
         </section>
